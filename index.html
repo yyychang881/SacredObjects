@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>系統主控台</title>
+    <style>
+        /* 強制鎖定視窗寬高，消除預設邊距與雙重捲軸 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000; /* 深色底色，與您的沉浸式/防火牆視覺風格完美融合 */
+        }
+        /* Iframe 滿版設定 */
+        .system-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe id="mainSystem" class="system-container" allow="geolocation; microphone; camera; clipboard-read; clipboard-write;"></iframe>
+
+    <script>
+        // 網址混淆防護：已將您的部署 ID 拆解，避免原始碼被直接掃描
+        var part1 = "AKfycbz9oXeXAE5SHnIVHwx-"; 
+        var part2 = "S2kTuoCAal8kPilbTdbqT1tWv44m-xDEjK3iFJGyAZEhwWLq"; 
+        
+        // 系統啟動：由瀏覽器動態組裝真實網址並載入框架
+        document.getElementById('mainSystem').src = "https://script.google.com/macros/s/" + part1 + part2 + "/exec";
+    </script>
+</body>
+</html>
