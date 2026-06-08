@@ -36,8 +36,8 @@
         var part1 = "AKfycbz9oXeXAE5SHnIVHwx-"; 
         var part2 = "S2kTuoCAal8kPilbTdbqT1tWv44m-xDEjK3iFJGyAZEhwWLq"; 
         
-        // 系統啟動：由瀏覽器動態組裝真實網址並載入框架
-        document.getElementById('mainSystem').src = "https://script.google.com/macros/s/" + part1 + part2 + "/exec";
+        // 系統啟動：由瀏覽器動態組裝真實網址並載入框架 (加上內部通行暗號 ?sys=core)
+        document.getElementById('mainSystem').src = "https://script.google.com/macros/s/" + part1 + part2 + "/exec?sys=core";
     </script>
 </body>
 </html>
